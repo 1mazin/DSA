@@ -1,0 +1,35 @@
+//You are given an array (ARR) of length N, consisting of integers. You have to find the sum of the subarray (including empty subarray) having maximum sum among all subarrays.
+//Solution->Kadane algorithm
+import java.util.* ;
+import java.io.*; 
+
+public class Solution {
+	
+	public static long maxSubarraySum(int[] a, int n) {
+        
+        int j=0;
+        long sum=0;
+        long max=Integer.MIN_VALUE;
+        //Arrays.sort(a);
+        while(j<n)
+        {
+            if(arr[j],)
+            sum+=a[j];
+            if(max<sum)
+            {
+                max=sum;
+            }
+            else if(sum<0)
+            {
+             sum=0;
+            }
+             j++; 
+            }
+        if(max<0)
+            max=0;
+          return max;  
+        }
+       
+		// write your code here
+	}
+
