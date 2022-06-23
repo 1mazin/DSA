@@ -1,0 +1,23 @@
+//Basic-Given an array of integers 'ARR' containing N elements. Each integer is in the range [1, N-1], with exactly one element repeated in the array.
+//Solution->
+import java.util.* ;
+import java.io.*; 
+import java.util.ArrayList;
+
+public class Solution{
+    public static int findDuplicate(ArrayList<Integer> a, int n){
+        // Write your code here.
+        HashMap<Integer,Integer> m= new HashMap<>();
+        for(int i=0;i<n;i++)
+        {
+            m.put(a.get(i),m.getOrDefault(a.get(i),0)+1);
+            if(m.get(a.get(i))>1)
+            {
+                return a.get(i);
+            }
+                
+        }
+        return 0;
+    }
+}
+
