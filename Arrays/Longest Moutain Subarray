@@ -1,0 +1,35 @@
+//given an array of 'N' integers denoting the heights of the mountains. You need to find the length of the longest subarray which has the shape of a mountain.
+//A mountain subarray is defined as a subarray which consists of elements that are initially in ascending order until a peak element is reached and beyond the peak element all other elements of the subarray are in decreasing order.
+
+public class Solution {
+	
+	public static int longestMountain(int arr[], int n)
+	{
+        if(n<3)
+        {
+            return 0;
+        }
+        int left=1,right=0;
+        int max=Integer.MIN_VALUE;
+		// Write your code here.
+        for(int i=1;i<n-1;i++)
+        {
+            if(arr[i-1]<arr[i] && arr[i]>arr[i+1]) //finding the first possible mountain .
+            {
+                 left=i-1;
+                 right=i+1;
+                
+                
+                while(left>0 && arr[left]>arr[left-1]) //Checking if the mountain can strech to left.
+                    left--;
+                while(right<n-1 && arr[right]>arr[right+1]) //Checking if the mountain can strech to right.
+                    right++;
+                
+            }
+            max=Math.max(max,right-left+1);
+            
+        }
+        return max;
+	}
+
+}
