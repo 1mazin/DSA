@@ -3,7 +3,7 @@ The objective of the puzzle is to move the entire stack to another rod. You are 
 You need to print all the steps of discs movement so that all the discs reach the 3rd rod. Also, you need to find the total moves.*/
 
 class Solution {
-long count=0;
+long count=0; //To keep the track of movement required to achieve the goal.
     public long toh(int N, int from, int to, int aux) {
         // Your code here
         
