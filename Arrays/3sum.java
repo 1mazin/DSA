@@ -9,7 +9,7 @@ class Solution {
                 while(low < high){
                     
                     if(nums[low] + nums[high] == sum){
-                        res.add(Arrays.asList(nums[i],nums[low],nums[high]));
+                        ans.add(Arrays.asList(nums[i],nums[low],nums[high]));
                         
                         //ignoring all the similar low values
                         while(low < high && nums[low] == nums[low+1]){
